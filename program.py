@@ -21,5 +21,18 @@ def genererPerson():
     
     return Person(fNavn, eNavn, mob)
 
-p1 = genererPerson()
+p1 = Spiller(genererPerson(), "angrep")
+trener1 = Trener(genererPerson())
+trener1.leggTilRolle()
+
+print(trener1.fornavn)
+print(trener1.roller[0])
+
+print(p1.fornavn)
+print(p1.etternavn)
+print(p1.tlf)
+print(p1.posisjon)
+
+lag1 = Lag(10, trener1)
+lag1.leggTilSpiller(p1)
 
